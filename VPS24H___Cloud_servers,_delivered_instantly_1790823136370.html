@@ -349,6 +349,7 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <div><b>Support</b><a href="#/faq">FAQ</a><a href="#/features">Features</a><a href="https://t.me/VPS24H" target="_blank" rel="noopener">Telegram 24/7</a><a href="#/support">Open a ticket</a><a href="#/legal?terms">Legal</a><a href="#/legal?about">About us</a><a href="#/support">Report abuse</a></div></div>
 <div class="cp"><span>© 2026 VPS24H. All rights reserved.</span><span><a href="#/legal?terms">Terms</a> · <a href="#/legal?privacy">Privacy</a> · <a href="#/legal?aup">Acceptable use</a> · <a href="#/legal?refund">Refunds</a></span></div></div></footer>
 <a class="tg" href="https://t.me/VPS24H" target="_blank" rel="noopener" aria-label="24/7 support on Telegram"><svg class="i"><use href="#tg"/></svg><span>24/7 Support</span></a>
+<div class="gm" id="gm" hidden></div>
 <div class="ck" id="ck" hidden><span>We use essential browser storage to keep you signed in.</span><button class="btn sm" id="ckb">OK</button></div>
 <div class="toast" id="ts" role="status" aria-live="polite"></div>
 
@@ -445,8 +446,8 @@ function gico(n){return'<svg viewBox="0 0 48 48" width="'+n+'" height="'+n+'" ar
 function gbtn(){return'<button type="button" class="gbtn" data-g="open">'+gico(18)+'Continue with Google</button><div class="or"><span>or</span></div>'}
 function gin(e,nm){var u=ls("u")||[],x=u.filter(function(k){return k.e==e})[0],n=x?x.n:((nm||e.split("@")[0]).split(/[ ._]/)[0]||"User");n=n.charAt(0).toUpperCase()+n.slice(1);
 if(!x){u.push({n:n,e:e,h:"google"});ls("u",u)}
-ls("s",{n:n,e:e});$("gm").hidden=true;toast("Signed in with Google");after()}
-document.addEventListener("click",function(e){var b=e.target.closest("[data-g]");if(!b)return;if(b.dataset.g=="open")gsign()});
+ls("s",{n:n,e:e});toast("Signed in with Google");after()}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-g]");if(!b)return;if(b.dataset.g=="open")gsign();else if(b.dataset.g=="close")$("gm").hidden=true});
 /* v4 */
 var AD=[["Automatic backups","Daily snapshots",3],["Extra IPv4","One more address",2],["Layer 7 DDoS filter","Advanced protection",5]];S.a=[];S.d=0;S.c="";
 function ad(){return AD.reduce(function(t,a,i){return t+(S.a[i]?a[2]:0)},0)}
