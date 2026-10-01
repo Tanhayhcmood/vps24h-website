@@ -4,17 +4,17 @@
 
 [Plans](#/plans)[Locations](#/locations)[Features](#/features)[FAQ](#/faq)[Status](#/status)[Support](#/support)
 
-Instant delivery · 6 regions · Crypto payments
+6 regions · BTC, ETH and USDT (BEP20) · Operator review
 
-# Cloud servers, delivered instantly.
+# Cloud servers, after payment review.
 
-High-performance NVMe VPS in 6 regions worldwide. Choose a plan, pay, and log in to your server in under a minute.
+Choose a plan, send crypto to the displayed wallet, then share your transaction hash with the team. An operator reviews payment before server setup.
 
 [Deploy a server](#/order)[Compare plans](#/plans)
 
 **99.99%**uptime SLA
 
-**\< 60 s**deploy time
+**10 min**payment window
 
 **24/7**human support
 
@@ -30,7 +30,7 @@ Network**84 Mbps**
 
 **srv-2-nl**185.20.31.7● Running
 
-Deployed in 42s
+Operator review required
 
 1.2M packets filtered
 
@@ -44,9 +44,9 @@ Choose location, system and plan in one place. Every plan includes 1 Gbps networ
 
 Every plan includes NVMe storage, DDoS protection and root access. Prices follow the location selected above.
 
-## From checkout to console in three steps
+## From checkout to server setup
 
-No tickets, no waiting.
+Every crypto payment is reviewed by an operator before provisioning.
 
 ### Configure
 
@@ -54,11 +54,11 @@ Pick a location, operating system and plan. The price updates as you choose.
 
 ### Pay
 
-Check out with crypto. Your 7-day money-back guarantee starts immediately.
+Choose BTC, ETH or USDT (BEP20), send within 10 minutes, then share the transaction hash with support.
 
-### Connect
+### Operator review
 
-Your server is provisioned in under a minute. Log in with the details in your dashboard.
+Our team checks the payment and follows up about server setup after approval.
 
 ## Servers where your users are
 
@@ -68,12 +68,12 @@ Six locations on three continents. Latency shown is a typical figure.
 
 The essentials, handled.
 
-### Instant setup
+### Operator-reviewed setup
 
-Servers are created automatically once payment clears.
+Server setup begins only after an operator reviews your payment.
 
 $ vps24h create --plan pro\
-**✔ server ready in 42s**
+**server setup after approval**
 
 ### DDoS protection
 
@@ -103,7 +103,7 @@ FrankfurtAmsterdamHelsinkiLondonNew YorkSingapore
 
 How fast is delivery?
 
-Usually under a minute. Login details appear in your dashboard.
+Payment confirmation depends on the network and operator review. Contact support on Telegram for updates; server setup follows approval.
 
 Can I upgrade later?
 
@@ -123,7 +123,7 @@ Yes, a full refund within the first 7 days.
 
 ## Ready when you are.
 
-Deploy your first server in under a minute.
+Start a server request and send your payment details for operator review.
 
 [Deploy a server](#/order)
 
@@ -139,7 +139,7 @@ Deploy your first server in under a minute.
 
 ### 5. Pay with crypto
 
-We accept only Bitcoin, Ethereum and USDT on the BEP20 network (BNB Smart Chain).
+We accept Bitcoin, Ethereum and USDT on the BEP20 network (BNB Smart Chain). Start a 10-minute payment window, then send the transaction hash and order reference to the operator on Telegram. The site does not automatically verify payments; setup follows manual approval.
 
 ### 6. Add-ons
 
@@ -201,7 +201,7 @@ Yes. Quarterly, semi-annual and yearly billing save up to 20%.
 
 How fast is delivery?
 
-Usually under a minute. Login details appear in your dashboard.
+Payment confirmation depends on the network and operator review. Contact support on Telegram for updates; server setup follows approval.
 
 Is there a refund policy?
 
@@ -213,7 +213,7 @@ Manage your servers, orders and billing.
 
 [VPS**24H**](#/)
 
-Powerful infrastructure. Delivered instantly.
+Powerful infrastructure. Operator-reviewed crypto payments.
 
 **Product**[Plans](#/plans)[Locations](#/locations)[Deploy](#/order)[System status](#/status)
 

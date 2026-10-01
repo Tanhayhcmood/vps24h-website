@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="High-performance NVMe VPS in 6 regions. Deploy in under a minute, pay with crypto, 24/7 Telegram support."><meta property="og:title" content="VPS24H | Cloud servers, delivered instantly"><title>VPS24H | Cloud servers, delivered instantly</title>
+<meta name="description" content="Choose a VPS plan, pay with Bitcoin, Ethereum or USDT on BEP20, then send your transaction details for manual operator review."><meta property="og:title" content="VPS24H | Operator-reviewed crypto payments"><title>VPS24H | Operator-reviewed crypto payments</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--r1:8px;--r2:12px;--r3:20px;
@@ -246,6 +246,20 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 .tk{display:flex;width:max-content;padding:14px 0;animation:tkm 40s linear infinite;font:700 14px "Bricolage Grotesque",Manrope,sans-serif;color:var(--mu)}
 .tk span{display:inline-flex;align-items:center;gap:40px;padding-right:40px;white-space:nowrap}.tk span::after{content:"✦";color:var(--ac);font-size:12px}
 @keyframes tkm{to{transform:translateX(-50%)}}
+.payment-box{margin-top:var(--s4);padding:var(--s4);border-color:var(--ln);background:var(--sf)}
+.payment-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s3)}
+.payment-head h4{font-size:17px;margin:0}.payment-head p,.payment-help{font-size:13px;color:var(--mu);margin:0}
+.payment-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2);margin:var(--s3) 0}
+.payment-meta>div{padding:var(--s3);border:1px solid var(--ln);border-radius:var(--r2);background:var(--bg);min-width:0}
+.payment-meta span{display:block;font-size:12px;color:var(--mu)}.payment-meta b{display:block;font-size:14px;overflow-wrap:anywhere}
+.payment-box label{display:block;font-size:13px;font-weight:700;margin:var(--s3) 0 6px}
+.payment-address{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;margin:6px 0 var(--s3)}
+.payment-address code{flex:1;min-width:220px;overflow-wrap:anywhere;background:var(--bg);border:1px solid var(--ln);padding:10px;border-radius:var(--r1);font:500 13px ui-monospace,Menlo,monospace}
+.payment-warning{border-left:3px solid var(--ac);padding:var(--s3);background:var(--bg);border-radius:var(--r1);font-size:13px;color:var(--mu);margin:var(--s3) 0}
+.payment-actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0}.payment-actions .btn{flex:1;min-width:190px}
+.payment-status{font-weight:700;color:var(--ac);margin-top:var(--s3)}
+.ch button:disabled,.sum .btn:disabled,.payment-box button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:560px){.payment-meta{grid-template-columns:1fr}.payment-address code{min-width:100%}}
 @media(max-width:560px){.hero{padding:var(--s6) 0 var(--s5);gap:var(--s6)}.hero .row .btn{flex:1 1 100%}.f2{top:-6px;right:8px}.f1{left:8px;bottom:8px}.fl{font-size:12px;padding:6px 10px}.mock{padding:26px 0 60px}.hero p{font-size:17px}}
 </style>
 </head>
@@ -269,29 +283,29 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <main data-v="home">
 <div class="w">
 <header class="hero"><div>
-<div class="eb"><i class="dot"></i>Instant delivery · 6 regions · Crypto payments</div>
-<h1>Cloud servers, <span class="gx">delivered instantly.</span></h1>
-<p>High-performance NVMe VPS in 6 regions worldwide. Choose a plan, pay, and log in to your server in under a minute.</p>
+<div class="eb"><i class="dot"></i>6 regions · BTC, ETH and USDT (BEP20) · Operator review</div>
+<h1>Cloud servers, <span class="gx">after payment review.</span></h1>
+<p>Choose a plan, send crypto to the displayed wallet, then share your transaction hash with our team. An operator reviews payment before server setup.</p>
 <div class="row"><a class="btn" href="#/order">Deploy a server</a><a class="btn out" href="#/plans">Compare plans</a></div>
-<div class="trust"><div><b>99.99%</b>uptime SLA</div><div><b>&lt; 60 s</b>deploy time</div><div><b>24/7</b>human support</div></div></div>
+<div class="trust"><div><b>3</b>supported crypto options</div><div><b>10 min</b>payment window</div><div><b>24/7</b>human support</div></div></div>
 <div class="mock" aria-hidden="true"><div class="win"><div class="wb"><i></i><i></i><i></i><span>VPS24H Console</span></div>
 <div class="wk"><div class="sd"><svg class="i on"><use href="#sv"/></svg><svg class="i"><use href="#gl"/></svg><svg class="i"><use href="#sh"/></svg><svg class="i"><use href="#hd"/></svg></div>
 <div class="mn"><div class="kp"><div><span>CPU</span><b>23%</b></div><div><span>RAM</span><b>1.2 GB</b></div><div><span>Network</span><b>84 Mbps</b></div></div>
 <svg class="chart" viewBox="0 0 300 90" preserveAspectRatio="none"><defs><linearGradient id="gr" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".45"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient></defs><path d="M0 70L30 55 60 62 90 38 120 48 150 28 180 40 210 22 240 34 270 16 300 24V90H0Z" fill="url(#gr)"/><path d="M0 70L30 55 60 62 90 38 120 48 150 28 180 40 210 22 240 34 270 16 300 24" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
 <div class="rw"><b>srv-1-de</b><span class="mono" style="color:var(--mu)">185.20.14.24</span><span class="badge ok">● Running</span></div>
 <div class="rw"><b>srv-2-nl</b><span class="mono" style="color:var(--mu)">185.20.31.7</span><span class="badge ok">● Running</span></div></div></div></div>
-<div class="fl f1"><svg class="i"><use href="#ck"/></svg>Deployed in 42s</div><div class="fl f2"><svg class="i"><use href="#sh"/></svg>1.2M packets filtered</div></div>
+<div class="fl f1"><svg class="i"><use href="#ck"/></svg>Operator review required</div><div class="fl f2"><svg class="i"><use href="#sh"/></svg>6 server regions</div></div>
 </header>
 <div class="tick" aria-hidden="true"><div class="tk"><span>Frankfurt</span><span>Amsterdam</span><span>Helsinki</span><span>London</span><span>New York</span><span>Singapore</span><span>NVMe storage</span><span>DDoS protection</span><span>Root access</span><span>1 Gbps network</span><span>Pay with crypto</span><span>24/7 Telegram support</span><span>Frankfurt</span><span>Amsterdam</span><span>Helsinki</span><span>London</span><span>New York</span><span>Singapore</span><span>NVMe storage</span><span>DDoS protection</span><span>Root access</span><span>1 Gbps network</span><span>Pay with crypto</span><span>24/7 Telegram support</span></div></div>
 <section class="sec" id="plans"><h2>Configure your server</h2><p class="sub">Choose location, system and plan in one place. Every plan includes 1 Gbps network, DDoS protection and root access.</p><div class="card qd" id="qd"></div></section>
 <section class="sec" id="compare"><h2>Compare plans</h2><p class="sub">Every plan includes NVMe storage, DDoS protection and root access. Prices follow the location selected above.</p><div class="tw" id="cm"></div></section>
-<section class="sec" id="how"><h2>From checkout to console in three steps</h2><p class="sub">No tickets, no waiting.</p><div class="g g3 sx">
+<section class="sec" id="how"><h2>From checkout to server setup</h2><p class="sub">Every crypto payment is reviewed by an operator before provisioning.</p><div class="g g3 sx">
 <div class="card"><h3>Configure</h3><p>Pick a location, operating system and plan. The price updates as you choose.</p></div>
-<div class="card"><h3>Pay</h3><p>Check out with crypto. Your 7-day money-back guarantee starts immediately.</p></div>
-<div class="card"><h3>Connect</h3><p>Your server is provisioned in under a minute. Log in with the details in your dashboard.</p></div></div></section>
+<div class="card"><h3>Pay</h3><p>Choose BTC, ETH or USDT (BEP20), send within 10 minutes, then share the transaction hash with support.</p></div>
+<div class="card"><h3>Operator review</h3><p>Our team checks the payment and follows up about server setup after approval.</p></div></div></section>
 <section class="sec" id="locations"><h2>Servers where your users are</h2><p class="sub">Six locations on three continents. Latency shown is a typical figure.</p><div class="g g3" id="lc"></div></section>
 <section class="sec" id="features"><h2>Built for production</h2><p class="sub">The essentials, handled.</p><div class="bento">
-<div class="card ft sp"><span class="ic"><svg class="i"><use href="#bo"/></svg></span><h3>Instant setup</h3><p>Servers are created automatically once payment clears.</p><div class="mini">$ vps24h create --plan pro<br><b>✔ server ready in 42s</b></div></div>
+<div class="card ft sp"><span class="ic"><svg class="i"><use href="#bo"/></svg></span><h3>Operator-reviewed setup</h3><p>Server setup begins only after an operator reviews your payment.</p><div class="mini">payment → operator review<br><b>server setup after approval</b></div></div>
 <div class="card ft"><span class="ic"><svg class="i"><use href="#sh"/></svg></span><h3>DDoS protection</h3><p>Network-level filtering on every plan, free.</p></div>
 <div class="card ft"><span class="ic"><svg class="i"><use href="#hd"/></svg></span><h3>Real support</h3><p>Technical staff, around the clock.</p><a class="tl" href="https://t.me/VPS24H" target="_blank" rel="noopener">Chat on Telegram →</a></div>
 <div class="card ft"><span class="ic"><svg class="i"><use href="#sv"/></svg></span><h3>Full control</h3><p>Root access, console, reboot and reinstall.</p></div>
@@ -299,12 +313,12 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <div class="card ft sp"><span class="ic"><svg class="i"><use href="#gl"/></svg></span><h3>Global network</h3><p>Six regions, 10 Gbps uplinks, low latency to your users.</p><div class="chips"><span class="badge">Frankfurt</span><span class="badge">Amsterdam</span><span class="badge">Helsinki</span><span class="badge">London</span><span class="badge">New York</span><span class="badge">Singapore</span></div></div>
 </div></section>
 <section class="sec" id="faq"><h2>Questions</h2><div style="margin-top:var(--s5);max-width:760px">
-<details><summary>How fast is delivery?</summary><p>Usually under a minute. Login details appear in your dashboard.</p></details>
+<details><summary>How fast is delivery?</summary><p>Payment confirmation depends on the network and operator review. Contact support on Telegram for updates; server setup follows approval.</p></details>
 <details><summary>Can I upgrade later?</summary><p>Yes. Resize your plan from the dashboard without losing data.</p></details>
 <details><summary>Which payment methods do you accept?</summary><p>Crypto only: Bitcoin (BTC), Ethereum (ETH) and USDT (BEP20).</p></details>
 <details><summary>How do I reach support?</summary><p>Message us any time on Telegram: <a class="tl" href="https://t.me/VPS24H" target="_blank" rel="noopener">t.me/VPS24H</a>. We answer 24/7.</p></details>
 <details><summary>Is there a refund policy?</summary><p>Yes, a full refund within the first 7 days.</p></details></div></section>
-<section class="sec" style="padding-top:0"><div class="card cta"><h2>Ready when you are.</h2><p>Deploy your first server in under a minute.</p><a class="btn" href="#/order">Deploy a server</a></div></section>
+<section class="sec" style="padding-top:0"><div class="card cta"><h2>Ready when you are.</h2><p>Start a server request and send your payment details for operator review.</p><a class="btn" href="#/order">Request a server</a></div></section>
 </div></main>
 
 <main data-v="order" hidden><div class="w ord"><div>
@@ -313,9 +327,21 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <div class="card stp"><h3>2. Operating system</h3><div class="ch" id="c-o"></div></div>
 <div class="card stp"><h3>3. Plan</h3><div class="ch" id="c-p"></div></div>
 <div class="card stp"><h3>4. Billing cycle</h3><div class="ch" id="c-b"></div></div>
-<div class="card stp"><h3>5. Pay with crypto</h3><div class="ch" id="c-m"></div><p style="color:var(--mu);font-size:13px;margin-top:var(--s3)">We accept only Bitcoin, Ethereum and USDT on the BEP20 network (BNB Smart Chain).</p></div>
+<div class="card stp"><h3>5. Pay with crypto</h3><div class="ch" id="c-m"></div><p style="color:var(--mu);font-size:13px;margin-top:var(--s3)">We accept Bitcoin, Ethereum and USDT on the BEP20 network (BNB Smart Chain).</p>
+<div class="payment-box card" id="payment-box" hidden aria-live="polite">
+<div class="payment-head"><div><h4>10-minute payment window</h4><p>Use only the address and network shown below.</p></div><span class="badge" id="payment-countdown" aria-live="off">10:00</span></div>
+<div class="payment-meta"><div><span>Order reference</span><b class="mono" id="payment-ref"></b></div><div><span>Amount due</span><b id="payment-amount"></b></div><div><span>Network</span><b id="payment-network"></b></div></div>
+<label for="payment-address">Payment address</label><div class="payment-address"><code id="payment-address" class="mono"></code><button type="button" class="btn out sm" id="copy-payment-address">Copy address</button></div>
+<p class="payment-warning">This static site does not detect or confirm payments. The displayed price is in USD, not a live BTC/ETH conversion; contact the operator for the exact crypto amount before sending. After payment, enter the transaction hash, copy the review details, and send them to support on Telegram. Server setup follows operator approval only.</p>
+<label for="payment-tx">Transaction hash</label><input class="in" id="payment-tx" autocomplete="off" placeholder="Paste the transaction ID after sending">
+<div class="err" id="payment-tx-error" role="alert"></div>
+<div class="payment-actions"><button type="button" class="btn out" id="copy-payment-details">Copy review details</button><a class="btn" href="https://t.me/VPS24H" target="_blank" rel="noopener">Contact operator on Telegram</a></div>
+<p class="payment-help">The request is saved only in this browser. It reaches the operator only when you send the copied details.</p>
+<p class="payment-status" id="payment-status" role="status"></p>
+<button type="button" class="btn ghost sm" id="cancel-payment">Cancel payment request</button>
+</div></div>
 <div class="card stp"><h3>6. Add-ons</h3><div class="ch" id="c-a"></div></div></div>
-<aside class="card sum" aria-label="Order summary"><h3 style="margin-bottom:var(--s2)">Order summary</h3><div class="pr" id="pr"></div><ul id="su"></ul><div class="promo"><input class="in" id="pc" placeholder="Promo code" autocomplete="off"><button type="button" class="btn out" id="pa">Apply</button></div><div class="err" id="pcx"></div><button class="btn full" id="dp">Place order</button><p class="alt" style="margin-top:var(--s3)">7-day money-back guarantee</p></aside></div></main>
+<aside class="card sum" aria-label="Order summary"><h3 style="margin-bottom:var(--s2)">Order summary</h3><div class="pr" id="pr"></div><ul id="su"></ul><div class="promo"><input class="in" id="pc" placeholder="Promo code" autocomplete="off"><button type="button" class="btn out" id="pa">Apply</button></div><div class="err" id="pcx"></div><button class="btn full" id="dp">Start 10-minute payment window</button><p class="alt" style="margin-top:var(--s3)">Payment is reviewed manually. No server is marked ready until an operator approves it.</p></aside></div></main>
 
 <main data-v="status" hidden><div class="w" style="padding-bottom:var(--s8)"><div class="dh"><h1>System status</h1><p>Availability of every location. Latency shown is typical.</p></div><div class="card stb"><i class="dot"></i>All systems operational</div><div id="sl"></div></div></main>
 <main data-v="support" hidden><div class="w"><div class="dh"><h1>Support</h1><p>We are here 24/7. Pick the fastest way to reach us.</p></div>
@@ -329,7 +355,7 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <details><summary>How do I open a port?</summary><p>On Ubuntu or Debian run ufw allow 80/tcp. On Windows Server add an inbound rule in Windows Defender Firewall.</p></details>
 <details><summary>Do prices differ by location?</summary><p>Yes. Prices follow the real cost of each region. Helsinki is cheaper, Singapore costs more, Frankfurt and Amsterdam are the base price.</p></details>
 <details><summary>Can I pay for longer periods?</summary><p>Yes. Quarterly, semi-annual and yearly billing save up to 20%.</p></details>
-<details><summary>How fast is delivery?</summary><p>Usually under a minute. Login details appear in your dashboard.</p></details>
+<details><summary>How fast is delivery?</summary><p>Payment confirmation depends on the network and operator review. Contact support on Telegram for updates; server setup follows approval.</p></details>
 <details><summary>Is there a refund policy?</summary><p>Yes, a full refund within the first 7 days. See the <a class="tl" href="#/legal?refund">refund policy</a>.</p></details></div></div></main>
 <main data-v="legal" hidden><div class="w lgl" id="lgm"></div></main>
 
@@ -343,7 +369,7 @@ h1,h2,h3,.logo{letter-spacing:-.03em}.logo{font-weight:800;font-size:22px}
 <div id="dc" style="padding-bottom:var(--s8)"></div></div></main>
 </div>
 
-<footer><div class="w"><div class="fg"><div><a class="logo" href="#/" style="display:inline">VPS<b>24H</b></a><p style="margin-top:var(--s3);max-width:30ch">Powerful infrastructure. Delivered instantly.</p></div>
+<footer><div class="w"><div class="fg"><div><a class="logo" href="#/" style="display:inline">VPS<b>24H</b></a><p style="margin-top:var(--s3);max-width:30ch">Powerful infrastructure. Operator-reviewed provisioning.</p></div>
 <div><b>Product</b><a href="#/plans">Plans</a><a href="#/locations">Locations</a><a href="#/order">Deploy</a><a href="#/status">System status</a></div>
 <div><b>Account</b><a href="#/login">Log in</a><a href="#/signup">Sign up</a><a href="#/dashboard">Dashboard</a></div>
 <div><b>Support</b><a href="#/faq">FAQ</a><a href="#/features">Features</a><a href="https://t.me/VPS24H" target="_blank" rel="noopener">Telegram 24/7</a><a href="#/support">Open a ticket</a><a href="#/legal?terms">Legal</a><a href="#/legal?about">About us</a><a href="#/support">Report abuse</a></div></div>
@@ -363,6 +389,11 @@ var RG=[["Frankfurt","DE","12 ms","🇩🇪",1],["Amsterdam","NL","14 ms","🇳�
 OS=["Ubuntu 24.04","Ubuntu 22.04","Ubuntu 20.04","Debian 12","Debian 11","Rocky Linux 9","AlmaLinux 9","CentOS Stream 9","Oracle Linux 9","Fedora 40","openSUSE Leap 15","Arch Linux","Kali Linux","FreeBSD 14","OpenBSD 7","Windows Server 2025","Windows Server 2022","Windows Server 2019","Windows Server 2016"],
 PL=[["PRO","4 vCPU","8 GB RAM","120 GB SSD","1 Gbps",11,"Entry Level",16,"🥈"],["POWER","6 vCPU","16 GB RAM","250 GB SSD","2 Gbps",20,"Standard",28,"🥇"],["ELITE","8 vCPU","32 GB RAM","500 GB SSD","2 Gbps",31,"Advanced",45,"💎"],["ULTRA","12 vCPU","64 GB RAM","1 TB SSD","5 Gbps",65,"",0,"🏆"]],
 BL=[["Monthly","Pay each month",1,1],["Quarterly","Save 5%",3,.95],["Semi-annual","Save 10%",6,.9],["Yearly","Save 20%",12,.8]],PM=[["Bitcoin","BTC"],["Ethereum","ETH"],["USDT (BEP20)","BNB Smart Chain"]],S={r:0,o:0,p:1,b:0,m:2};
+var PAYMENT_WALLETS=[
+{currency:"BTC",network:"Bitcoin mainnet",address:"bc1qe4u06ttrj9c37lmlkv7rks6h7tyttwe2sfwffe"},
+{currency:"ETH",network:"Ethereum mainnet",address:"0xab96D9Ba2545b5BB6076A649117C5120019062Ba"},
+{currency:"USDT",network:"BNB Smart Chain (BEP20)",address:"0xab96D9Ba2545b5BB6076A649117C5120019062Ba"}
+],paymentTicker=null;
 function pc(b){return Math.round(b*RG[S.r][4])}
 function pt(r){var d=Math.round((r[4]-1)*100);return d?(d>0?"+":"\u2212")+Math.abs(d)+"%":"Base price"}
 function pl(x){return x[8]+" "+x[0]+" · "+x[1]+" · "+x[2]+" · $"+pc(x[5])}
@@ -378,13 +409,27 @@ function planCards(){locs();qd();cmp()}
 function locs(){$("lc").innerHTML=RG.map(function(r){return'<div class="card loc"><div class="cc">'+r[3]+'</div><div><b>'+r[0]+'</b><small>Tier III · 10 Gbps · '+pt(r)+'</small></div><span class="badge ok">'+r[2]+'</span></div>'}).join("")}
 function chips(id,arr,key,fn){$(id).innerHTML=arr.map(function(a,i){return'<button type="button" data-k="'+key+'" data-i="'+i+'" aria-pressed="'+(S[key]==i)+'">'+fn(a)+'</button>'}).join("")}
 function total(){var b=pc(PL[S.p][5])*BL[S.b][2]*BL[S.b][3]+(ad()+wl())*BL[S.b][2];return b*(1-S.d)}
+function setPaymentLock(locked){document.querySelectorAll('[data-v="order"] .stp .ch button,#pc,#pa').forEach(function(x){x.disabled=locked});$("dp").disabled=locked;$("dp").textContent=locked?"Payment window active":"Start 10-minute payment window"}
+function updatePaymentCountdown(){var d=ls("paymentDraft");if(!d)return;var seconds=Math.max(0,Math.ceil((Number(d.expiresAt)-Date.now())/1000)),badge=$("payment-countdown"),box=$("payment-box");if(seconds>0){badge.textContent=String(Math.floor(seconds/60)).padStart(2,"0")+":"+String(seconds%60).padStart(2,"0");badge.className="badge"}else{badge.textContent="Expired";badge.className="badge";if(!box.dataset.expired){$("payment-status").textContent="The 10-minute window has expired. This site cannot confirm whether funds arrived; if you already sent payment, contact the operator with your transaction hash before cancelling.";box.dataset.expired="1"}}}
+function renderPaymentDraft(){var d=ls("paymentDraft");if(!d){$("payment-box").hidden=true;setPaymentLock(false);if(paymentTicker){clearInterval(paymentTicker);paymentTicker=null}return}
+$("payment-box").hidden=false;$("payment-ref").textContent=d.ref;$("payment-amount").textContent="$"+fp(Number(d.amount))+" USD";$("payment-network").textContent=d.network;$("payment-address").textContent=d.address;
+$("payment-status").textContent="Payment is not verified here. Send your transaction details to the operator and wait for manual approval.";setPaymentLock(true);updatePaymentCountdown();if(paymentTicker)clearInterval(paymentTicker);paymentTicker=setInterval(updatePaymentCountdown,1000)}
+function restorePaymentSelection(){var d=ls("paymentDraft"),s=d&&d.selection;if(!s)return;if(Number.isInteger(s.r)&&RG[s.r])S.r=s.r;if(Number.isInteger(s.o)&&OS[s.o])S.o=s.o;if(Number.isInteger(s.p)&&PL[s.p])S.p=s.p;if(Number.isInteger(s.b)&&BL[s.b])S.b=s.b;if(Number.isInteger(s.m)&&PAYMENT_WALLETS[s.m])S.m=s.m;if(Array.isArray(s.a))S.a=s.a.slice(0,AD.length);if(Number.isFinite(s.d))S.d=s.d;if(typeof s.c=="string")S.c=s.c}
+function startPaymentRequest(){if(ls("paymentDraft")){renderPaymentDraft();$("payment-box").scrollIntoView({behavior:"smooth",block:"center"});return}
+var wallet=PAYMENT_WALLETS[S.m],d={ref:"VPS-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,7).toUpperCase(),amount:total(),currency:wallet.currency,network:wallet.network,address:wallet.address,expiresAt:Date.now()+10*60*1000,selection:{r:S.r,o:S.o,p:S.p,b:S.b,m:S.m,a:S.a.slice(),d:S.d,c:S.c}};
+ls("paymentDraft",d);$("payment-tx").value="";$("payment-tx-error").textContent="";$("payment-box").dataset.expired="";renderPaymentDraft();$("payment-box").scrollIntoView({behavior:"smooth",block:"center"});toast("Payment window started. Operator review is required.")}
+async function copyText(text){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(text);else{var el=document.createElement("textarea");el.value=text;el.setAttribute("readonly","");el.style.position="fixed";el.style.opacity="0";document.body.appendChild(el);el.select();var copied=document.execCommand("copy");el.remove();if(!copied)throw new Error("Clipboard unavailable")}return true}catch(e){return false}}
+function copyPaymentDetails(){var d=ls("paymentDraft"),tx=$("payment-tx").value.trim();if(!d)return;if(!tx){$("payment-tx-error").textContent="Enter the transaction hash after sending payment.";return}
+$("payment-tx-error").textContent="";var details=["VPS24H payment review request","Order: "+d.ref,"Amount: $"+fp(Number(d.amount))+" USD","Payment currency: "+d.currency,"Network: "+d.network,"Wallet: "+d.address,"Plan: "+PL[d.selection.p][0]+" · "+BL[d.selection.b][0],"Region: "+RG[d.selection.r][0],"Operating system: "+OS[d.selection.o],"Transaction hash: "+tx].join("\n");
+copyText(details).then(function(ok){$("payment-status").textContent=ok?"Review details copied. Paste them into the Telegram support chat; payment remains pending until the operator approves it.":"Could not copy automatically. Select and copy your transaction details, then send them to Telegram support."})}
+function cancelPaymentRequest(){if(!ls("paymentDraft"))return;if(!window.confirm("Cancel this local payment request? If you have already sent funds, contact the operator before cancelling."))return;ls("paymentDraft",null);$("payment-tx").value="";$("payment-tx-error").textContent="";$("payment-status").textContent="";$("payment-box").dataset.expired="";renderPaymentDraft();toast("Payment request cancelled.")}
 function cfg(){chips("c-r",RG,"r",function(a){return a[0]+"<small>"+a[1]+" · "+a[2]+" · "+pt(a)+"</small>"});chips("c-o",OS,"o",function(a){return/Windows/.test(a)?a+"<small>+$6/mo license</small>":a});chips("c-p",PL,"p",function(a){return a[0]+"<small>"+a[1]+" · "+a[2]+" · "+a[3]+"</small>"});chips("c-b",BL,"b",function(a){return a[0]+"<small>"+a[1]+"</small>"});chips("c-m",PM,"m",function(a){return a[0]+"<small>"+a[1]+"</small>"});$("c-a").innerHTML=AD.map(function(a,i){return'<button type="button" data-ad="'+i+'" aria-pressed="'+!!S.a[i]+'">'+a[0]+"<small>+$"+a[2]+"/mo · "+a[1]+"</small></button>"}).join("");
 var p=PL[S.p];$("pr").innerHTML="$"+fp(total())+" <small>due today</small>";
 $("su").innerHTML="<li>Location<b>"+RG[S.r][0]+"</b></li><li>System<b>"+OS[S.o]+"</b></li><li>Plan<b>"+p[0]+"</b></li><li>Resources<b>"+p[1]+" · "+p[2]+"</b></li><li>Billing<b>"+BL[S.b][0]+"</b></li>"+(wl()?"<li>Windows license<b>+$"+wl()+"/mo</b></li>":"")+(ad()?"<li>Add-ons<b>+$"+ad()+"/mo</b></li>":"")+(S.d?"<li>Promo "+S.c+"<b>\u2212"+Math.round(S.d*100)+"%</b></li>":"")}
-$("dp").onclick=function(){var b=this;if(!ls("s")){ls("pend",1);toast("Create an account to place your order.");location.hash="#/signup";return}
-busy(b,1," Processing…");setTimeout(function(){var l=ls("srv")||[],o=ls("ord")||[],n=1001+o.length;
-l.push({n:"srv-"+(l.length+1)+"-"+RG[S.r][1].toLowerCase(),r:RG[S.r][0],o:OS[S.o],p:PL[S.p][0],ip:"185."+(Math.random()*200+10|0)+"."+(Math.random()*250|0)+"."+(Math.random()*250|0),due:Date.now()+BL[S.b][2]*30*864e5});
-o.push({id:"#"+n,d:new Date().toISOString().slice(0,10),p:PL[S.p][0]+" · "+BL[S.b][0],t:total(),m:PM[S.m][0]});ls("srv",l);ls("ord",o);busy(b,0);T="srv";toast("Order placed. Your server is ready.");location.hash="#/dashboard"},1300)};
+$("dp").onclick=function(){if(!ls("s")){ls("pend",1);toast("Create an account to start a payment request.");location.hash="#/signup";return}startPaymentRequest()};
+$("copy-payment-address").onclick=function(){copyText($("payment-address").textContent).then(function(ok){toast(ok?"Wallet address copied.":"Could not copy; select and copy the address.",!ok)})};
+$("copy-payment-details").onclick=copyPaymentDetails;
+$("cancel-payment").onclick=cancelPaymentRequest;
 document.addEventListener("click",function(e){var b=e.target.closest("[data-k]");if(b){S[b.dataset.k]=+b.dataset.i;cfg();if(b.dataset.k=="b")planCards()}var z=e.target.closest("[data-bt]");if(z){S.b=+z.dataset.bt;planCards();cfg()}
 var t=e.target.closest("[data-t]");if(t){var i=$(t.dataset.t),h=i.type=="password";i.type=h?"text":"password";t.textContent=h?"Hide":"Show"}
 var a=e.target.closest("[data-tab]");if(a){T=a.dataset.tab;dash()}var x=e.target.closest("[data-act]");if(x)act(x.dataset.act,x.dataset.n)});
@@ -394,8 +439,8 @@ $("mn").onclick=function(){this.classList.remove("open");$("bg").setAttribute("a
 /* auth */
 function fld(id,l,t,ph,ac){return'<label for="'+id+'">'+l+'</label>'+(t=="password"?'<div class="pw"><input class="in" id="'+id+'" type="password" autocomplete="'+ac+'" placeholder="'+ph+'"><button type="button" data-t="'+id+'">Show</button></div>':'<input class="in" id="'+id+'" type="'+t+'" autocomplete="'+ac+'" placeholder="'+ph+'">')+'<div class="err" id="'+id+'x"></div>'}
 function shell(t,p,l,f){return'<div class="side"><a class="logo" href="#/">VPS<b>24H</b></a><div><h2>'+t+'</h2><p>'+p+'</p></div><ul>'+l.map(function(x){return'<li><svg class="i"><use href="#ck"/></svg>'+x+'</li>'}).join("")+'</ul></div>'+f}
-$("al").innerHTML=shell("Welcome back.","Manage your servers, orders and billing in one place.",["Instant deploys","99.99% uptime SLA","24/7 support"],'<form class="fm" id="fl" novalidate><h1>Log in</h1><p class="sub">Enter your details to access your account.</p>'+gbtn()+fld("le","Email","email","you@example.com","email")+fld("lp","Password","password","Your password","current-password")+'<div style="text-align:right;font-size:13px"><a href="#/forgot" style="color:var(--ac);font-weight:600">Forgot password?</a></div><button class="btn full" type="submit">Log in</button><div class="alt">New here? <a href="#/signup">Create an account</a></div></form>');
-$("as").innerHTML=shell("Launch your first server in a minute.","Create an account and deploy anywhere in the world.",["No setup fees","7-day refund","Pay with crypto"],'<form class="fm" id="fs" novalidate><h1>Create account</h1><p class="sub">Free to join. Pay only for what you deploy.</p>'+gbtn()+fld("sn","Full name","text","Jane Doe","name")+fld("se","Email","email","you@example.com","email")+fld("sp","Password","password","At least 8 characters","new-password").replace('<div class="err"','<div class="bar2"><i id="sb"></i></div><div class="err"')+fld("sc","Confirm password","password","Repeat password","new-password")+'<label class="chk"><input type="checkbox" id="st"> I agree to the <a href="#/legal?terms" target="_blank" rel="noopener" style="color:var(--ac)">Terms</a> and <a href="#/legal?privacy" target="_blank" rel="noopener" style="color:var(--ac)">Privacy Policy</a>.</label><div class="err" id="stx"></div><button class="btn full" type="submit">Create account</button><div class="alt">Already registered? <a href="#/login">Log in</a></div></form>');
+$("al").innerHTML=shell("Welcome back.","Manage your server requests and account details.",["Operator-reviewed setup","Crypto payment review","24/7 support"],'<form class="fm" id="fl" novalidate><h1>Log in</h1><p class="sub">Enter your details to access your account.</p>'+gbtn()+fld("le","Email","email","you@example.com","email")+fld("lp","Password","password","Your password","current-password")+'<div style="text-align:right;font-size:13px"><a href="#/forgot" style="color:var(--ac);font-weight:600">Forgot password?</a></div><button class="btn full" type="submit">Log in</button><div class="alt">New here? <a href="#/signup">Create an account</a></div></form>');
+$("as").innerHTML=shell("Request your first server.","Create an account, then submit payment details for operator review.",["10-minute payment window","Manual payment review","Pay with crypto"],'<form class="fm" id="fs" novalidate><h1>Create account</h1><p class="sub">Free to join. Pay only for what you request.</p>'+gbtn()+fld("sn","Full name","text","Jane Doe","name")+fld("se","Email","email","you@example.com","email")+fld("sp","Password","password","At least 8 characters","new-password").replace('<div class="err"','<div class="bar2"><i id="sb"></i></div><div class="err"')+fld("sc","Confirm password","password","Repeat password","new-password")+'<label class="chk"><input type="checkbox" id="st"> I agree to the <a href="#/legal?terms" target="_blank" rel="noopener" style="color:var(--ac)">Terms</a> and <a href="#/legal?privacy" target="_blank" rel="noopener" style="color:var(--ac)">Privacy Policy</a>.</label><div class="err" id="stx"></div><button class="btn full" type="submit">Create account</button><div class="alt">Already registered? <a href="#/login">Log in</a></div></form>');
 $("af").innerHTML=shell("Reset your password.","We will email you a secure reset link.",["Link expires in 30 minutes"],'<form class="fm" id="ff" novalidate><h1>Forgot password</h1><p class="sub">Enter the email you registered with.</p>'+fld("fe","Email","email","you@example.com","email")+'<div class="note" id="fn" hidden>If an account exists for this email, a reset link has been sent.</div><button class="btn full" type="submit">Send reset link</button><div class="alt"><a href="#/login">Back to log in</a></div></form>');
 function em(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
 function er(id,m){$(id+"x").textContent=m||"";return!m}
@@ -420,7 +465,7 @@ document.querySelectorAll("[data-tab]").forEach(function(b){b.setAttribute("aria
 $("dc").innerHTML='<div class="skel"></div><div class="skel"></div>';
 setTimeout(function(){var h="";
 var sh='<div class="stat"><div class="card"><b>'+l.length+'</b><span>Active servers</span></div><div class="card"><b>'+o.length+'</b><span>Orders placed</span></div><div class="card"><b>24/7</b><span>Support available</span></div></div>';
-if(T=="srv")h=sh+(l.length?l.map(function(x){return'<div class="card srv"><div><b>'+x.n+'</b><small>'+x.p+' · '+x.o+' · '+x.r+(x.due?" · Renews "+new Date(x.due).toISOString().slice(0,10):"")+'</small></div><div><span class="mono">'+x.ip+'</span><small><span style="color:'+(/…$/.test(x.s||"")?"var(--mu)":x.s=="Stopped"?"var(--er)":"var(--ok)")+'">● '+(x.s||"Running")+'</span></small></div><div class="row"><button class="btn out sm" data-act="Reboot" data-n="'+x.n+'">Reboot</button><button class="btn out sm" data-act="Reinstall" data-n="'+x.n+'">Reinstall</button><button class="btn out sm" data-act="Power" data-n="'+x.n+'">Power</button><button class="btn out sm" data-act="Delete" data-n="'+x.n+'">Delete</button></div></div>'}).join(""):'<div class="empty"><b>No servers yet</b>Deploy your first server in under a minute.<br><a class="btn" href="#/order">Deploy a server</a></div>');
+if(T=="srv")h=sh+(l.length?l.map(function(x){return'<div class="card srv"><div><b>'+x.n+'</b><small>'+x.p+' · '+x.o+' · '+x.r+(x.due?" · Renews "+new Date(x.due).toISOString().slice(0,10):"")+'</small></div><div><span class="mono">'+x.ip+'</span><small><span style="color:'+(/…$/.test(x.s||"")?"var(--mu)":x.s=="Stopped"?"var(--er)":"var(--ok)")+'">● '+(x.s||"Running")+'</span></small></div><div class="row"><button class="btn out sm" data-act="Reboot" data-n="'+x.n+'">Reboot</button><button class="btn out sm" data-act="Reinstall" data-n="'+x.n+'">Reinstall</button><button class="btn out sm" data-act="Power" data-n="'+x.n+'">Power</button><button class="btn out sm" data-act="Delete" data-n="'+x.n+'">Delete</button></div></div>'}).join(""):'<div class="empty"><b>No servers yet</b>Server setup follows payment review and operator approval.<br><a class="btn" href="#/order">Start server request</a></div>');
 if(T=="ord")h=o.length?tbl(["Order","Date","Plan","Payment","Total"],o.slice().reverse().map(function(x){return"<tr><td>"+x.id+"</td><td>"+x.d+"</td><td>"+x.p+"</td><td>"+x.m+"</td><td>$"+fp(x.t)+"</td></tr>"})):'<div class="empty"><b>No orders yet</b>Your orders will appear here.<br><a class="btn" href="#/order">Place an order</a></div>';
 if(T=="tk"){var k=ls("tk")||[];h=k.length?tbl(["Ticket","Subject","Category","Status"],k.slice().reverse().map(function(x){return"<tr><td>#"+x.id+"</td><td>"+esc(x.s)+"</td><td>"+esc(x.c)+"</td><td><span class=\"badge\">Open</span></td></tr>"})):'<div class="empty"><b>No tickets</b>Need help? Open a ticket or message us on Telegram.<br><a class="btn" href="#/support">Contact support</a></div>'}
 if(T=="bil"){var sum=o.reduce(function(a,x){return a+x.t},0);h='<div class="stat"><div class="card"><b>$'+fp(sum)+'</b><span>Total spent</span></div><div class="card"><b>'+l.length+'</b><span>Active servers</span></div><div class="card"><b>Crypto</b><span>Payment method</span></div></div>'+(o.length?tbl(["Invoice","Date","Amount","Status"],o.slice().reverse().map(function(x){return"<tr><td>INV-"+x.id.slice(1)+'</td><td>'+x.d+"</td><td>$"+fp(x.t)+'</td><td><span class="badge ok">Paid</span></td></tr>'})):'<div class="empty"><b>No invoices yet</b>Invoices appear after your first order.</div>')}
@@ -434,7 +479,7 @@ else h+='<a class="btn ghost sm" href="#/login"><svg class="i"><use href="#us"/>
 $("ac").innerHTML=h;if(s)$("lo").onclick=function(){ls("s",null);toast("Logged out");location.hash="#/"}}
 function route(){var q=location.hash.replace(/^#\/?/,"").split("?"),h=q[0]||"home",sec=null;if(["plans","locations","features","faq"].indexOf(h)>-1){sec=h;h="home"}
 if(["home","order","login","signup","forgot","dashboard","status","support","legal"].indexOf(h)<0)h="home";
-if(h=="order"&&q[1]){var m=/plan=(\d)/.exec(q[1]);if(m&&PL[+m[1]]){S.p=+m[1];cfg()}}
+if(h=="order"&&q[1]&&!ls("paymentDraft")){var m=/plan=(\d)/.exec(q[1]);if(m&&PL[+m[1]]){S.p=+m[1];cfg()}}
 var s=ls("s");if(h=="dashboard"&&!s){location.hash="#/login";return}if((h=="login"||h=="signup")&&s){location.hash="#/dashboard";return}
 document.querySelectorAll("[data-v]").forEach(function(x){x.hidden=x.dataset.v!=h});nav();if(h=="home")qd();if(h=="dashboard")dash();if(h=="status")st();if(h=="legal")lg(q[1]);
 if(sec)setTimeout(function(){$(sec).scrollIntoView()},30);else window.scrollTo(0,0)}
@@ -477,7 +522,7 @@ document.addEventListener("click",function(e){var r=e.target.closest("[data-rs]"
 if(r){var o=$("ro").value,n=r.dataset.rs;sv(n,function(k){k.o=o;k.s="Reinstalling…"});$("gm").hidden=true;setTimeout(function(){sv(n,function(k){k.s="Running"});toast("Reinstall complete")},4000)}
 if(m){ls("srv",(ls("srv")||[]).filter(function(k){return k.n!=m.dataset.rm}));$("gm").hidden=true;toast("Server deleted");dash()}});
 (function(){var l=ls("srv");if(l){l.forEach(function(k){if(/…$/.test(k.s||""))k.s="Running"});ls("srv",l)}})();
-LG.about=["About us",[["Who we are","VPS24H sells high-performance NVMe virtual servers in six regions, delivered in under a minute."],["Contact","Message us 24/7 on Telegram at t.me/VPS24H or open a ticket from your dashboard."],["Report abuse","To report abuse from one of our servers, open a ticket with the category Abuse report."]]];
+LG.about=["About us",[["Who we are","VPS24H offers NVMe virtual servers in six regions. Crypto payments are reviewed by an operator before server setup."],["Contact","Message us 24/7 on Telegram at t.me/VPS24H or open a ticket from your dashboard."],["Report abuse","To report abuse from one of our servers, open a ticket with the category Abuse report."]]];
 if(!ls("ck"))$("ck").hidden=false;$("ckb").onclick=function(){ls("ck",1);$("ck").hidden=true};
 /* v6 nav events */
 (function(){var t=ls("th");if(t)document.documentElement.dataset.theme=t})();
@@ -486,7 +531,7 @@ if(e.target.closest("#tt")){var d=dk();document.documentElement.dataset.theme=d?
 if(e.target.closest("#av")){u.classList.toggle("open");return}
 var g=e.target.closest("[data-go]");if(g){T=g.dataset.go;if(location.hash=="#/dashboard")dash()}
 if(u)u.classList.remove("open")});
-window.addEventListener("hashchange",route);planCards();cfg();qd();route();
+restorePaymentSelection();window.addEventListener("hashchange",route);planCards();cfg();qd();route();renderPaymentDraft();
 </script>
 </body>
 </html>
