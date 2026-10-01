@@ -460,7 +460,8 @@ $("ff").onsubmit=function(e){e.preventDefault();if(er("fe",!em($("fe").value.tri
 /* dashboard */
 var T="srv";
 function tbl(h,rows){return'<div class="tw"><table><thead><tr>'+h.map(function(x){return"<th>"+x+"</th>"}).join("")+"</tr></thead><tbody>"+rows.join("")+"</tbody></table></div>"}
-function dash(){var s=ls("s"),l=ls("srv")||[],o=ls("ord")||[];$("hi").textContent="Hello, "+s.n.split(" ")[0];
+function accountOrders(s){return ls("ord:"+String(s.e||"").trim().toLowerCase())||[]}
+function dash(){var s=ls("s"),l=ls("srv")||[],o=accountOrders(s);$("hi").textContent="Hello, "+s.n.split(" ")[0];
 document.querySelectorAll("[data-tab]").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab==T)});
 $("dc").innerHTML='<div class="skel"></div><div class="skel"></div>';
 setTimeout(function(){var h="";
